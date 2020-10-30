@@ -1,3 +1,49 @@
+/* banner */
+.banner-container {
+  background: #bae5fb;
+}
+.banner {
+  width: 740px;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.banner__title {
+  font-size: 31px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.banner__title--blue--strong {
+  color: #24388d;
+  font-weight: 700;
+
+}
+
+.banner__title::after {
+  content:"";
+  width: 40px;
+  display: block;
+  margin: 15px auto;
+  height: 1px;
+  border: 1px solid black;
+}
+
+.banner__desc {
+  margin: 53px;
+}
+.banner__btn {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #233d84;
+  font-weight: 700;
+  border: 1px solid black;
+}
+
+/* promotion menu */
+
+
 /* 음료 애니메이션 Keyframes */
 @keyframes bounce {
   0% {

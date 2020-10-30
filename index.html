@@ -51,9 +51,9 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="header__heading">Ediay Coffee</h1>
-        <nav>
-            <a href="#"><img src="./images/brand.svg" alt="logo" class="logo"></a>
+        <h1 class="header__heading readable-hidden">Ediay Coffee</h1>
+        <nav class="main-nav">
+            <a href="#"><img src="./images/brand.svg" alt="logo" class="main-nav__logo"></a>
             <ul class="main-nav__list">
                 <li class="main-nav__list-item"><a href="#">로그인</a></li>
                 <li class="main-nav__list-item"><a href="#">회원가입</a></li>
@@ -64,5 +64,87 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="banner-container">
+            <div class="banner">
+                <h2 class="banner__heading readable-hidden">배너</h2>      
+                <div class="banner__title">ALWAYS BESIDE YOU<span class="banner__title--blue--strong"> EDIYA COFFEE</span></div>
+                <div class="banner__desc">늘 당신 곁에, 이디야 커피의 다양한 메뉴를 맛보세요.</div> 
+                <a href="#" class="banner__btn">메뉴보기</a>  
+            </div>
+        </section>
+        <section>
+            <div class="promotion-menu">
+                <h2 class="promotion-menu__heading readable-hidden">메뉴 이미지</h2>
+                <ul class="promotion-menu__list">
+                    <li class="promotion-menu__list-item"><img src="./images/choco-rice-img.png" alt="초코 묻고 더블 쉐이크">초코 묻고 더블<br/><span>쉐이크<br/>Choco Shake</span></li>
+                    <li class="promotion-menu__list-item">
+                        <img src="./images/cheese-cookie-img.png" alt="치즈쿠키 쉐이크 랑 라이스 쉐이크"> 
+                        <p>치즈가 쿠키했대<br/><span>쉐이크<br/>Cheese Shake</span></p>
+                        <p>밥대신 라이스<br/><span>쉐이크<br/>Rice Shake</span></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="info-board">
+                <h2 class="info-board__heading">회사 정보</h2>
+                <article class="video">
+                    <h3 class="info-board__thank-to-customer-video">고객감사 영상</h3>
+                    <iframe id="thankToCustomerVideo" title="고객감사 영상" src="https://www.youtube.com/embed/UGPo0RqhbKU"></iframe>
+                </article>
+                <article class="notice">
+                    <h3 class="notice__heading">Notice</h3>
+                    <div class="notice__btn-group">
+                        <button class="notice__btn-prev">이전 소식보기</button>
+                        <button class="notice__btn-next">다음 소식보기</button>
+                    </div>
+                    <h3 class="notice__subheading">이디야멤버스가 새로워집니다.</h3>
+                    <time datetime="2020-04-25">2020-04-25</time>
+                    <p class="notice__subheading-desc">이디야멤버스에 새로운 기능이 추가됩니다. 추가되는 고객등급제, 이디야카드, 스마트 브라브랍란ㅁㅇ람ㄴ암나안ㅁ</p>
+                </article>
+                <article class="news">
+                    <h3 class="news__heading">NEWS</h3>
+                    <ul>
+                        <li><a href="#">[MTN] 이디야커피, 조각 케이크 2종 출시 디저트 강화</a><time datetime="2020-04-25">2020-09-08</time></li>
+                        <li><a href="#">[아시아경제] 이디야커피, '비니스트 커피믹스 ...</a><time datetime="2020-04-25">2020-08-27</time></li>
+                    </ul>
+                    <button class="news__btn-more"></button>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h2 class="footer__heading readable-hidden">밑공간</h2>
+        <div class="footer-nav">
+            <h3 class="footer-nav__heading readable-hidden">탐색바</h3>
+            <ul class="footer-nav__list">
+                <li class="footer-nav__list-item"><a href="#">개인정보처리방침</a></li>
+                <li class="footer-nav__list-item"><a href="#">멤버스 이용약관</a></li>
+                <li class="footer-nav__list-item"><a href="#">가맹 안내</a></li>
+                <li class="footer-nav__list-item"><a href="#">대량쿠폰구매</a></li>
+                <li class="footer-nav__list-item"><a href="#">채용안내</a></li>
+                <li class="footer-nav__list-item"><a href="#">고객의 소리</a></li>
+                <li class="footer-nav__list-item"><a href="#">사이트맵</a></li>
+                <li class="footer-nav__list-item"><a href="#">점주의방</a></li>
+            </ul>
+        </div>
+        <div class="footer-info-board">
+            <h3 class="footer-info-board__heading readable-hidden">회사정보</h3>
+            <img src="./images/brand-dark.svg" alt="브랜드 로고" class="footer-info-board__brand-logo">
+            <address class="footer-info-board__address">
+                <span>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</span>
+                <span>TEL : 02-543-6467</span>
+                <span>FAX : 02-543-7191</span>
+            </address>
+            <div class="footer-info-board__company-info">
+                <span><strong>사업자등록번호</strong> : 107-86-16302</span>
+                <span><strong>통신판매업 신고</strong> : 강남 제 002519호</span>
+                <span><strong>대표이사</strong> : 문창기</span>
+            </div>
+            <p class="footer-info-board__copyright">&copy; 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</p>
+        </div>
+    </footer>
+    <button id="btnGoToTop" class="btn-goToTop"></button>
 </body>
 </html>
