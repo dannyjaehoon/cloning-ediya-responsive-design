@@ -38,32 +38,25 @@
       <link rel="stylesheet" href="./css/style.css" />
       <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
   
-      <!-- 스크립트: 즉시 실행 -->
-      <script src="./js/utils/dom.js"></script>
-      <script src="./js/utils/mixins.js"></script>
-      <script src="./js/utils/isDevelopmentMode.js"></script>
-      <script src="./js/polyfills/unfetch.js"></script>
-      <script src="./js/components/navigation/Navigation.js"></script>
-      <script src="./js/components/navigation/NavigationItem.js"></script>
-  
-      <!-- 스크립트: DOM 콘텐츠 준비 이후 실행 -->
-      <script src="./js/navigationControl.js" defer></script>
+
 </head>
 <body>
     <header class="header">
-        <h1 class="header__heading readable-hidden">Ediay Coffee</h1>
-        <nav class="main">
-            <a href="#"><img src="./images/brand.svg" alt="logo" class="main__logo"></a>
-            <ul class="main__list">
-                <li class="main__list-item"><a href="#">로그인</a></li>
-                <li class="main__list-item"><a href="#">회원가입</a></li>
-                <li class="main__list-item"><a href="#">이다야 디자인</a></li>
-                <li class="main__list-item"><a href="#">이디야 음료</a></li>
-                <li class="main__list-item"><a href="#">이디야 뉴스</a></li>
-                <li class="main__list-item"><a href="#">매장 찾기</a></li>
-            </ul>
-        </nav>
-        <button></button>
+        <div id="header-container" class="header-container">
+            <h1 class="header__heading"><a href="#"><img src="./images/brand.svg" alt="logo" class="main__logo"></a></h1>
+            <button type="button" class="button is-open-menu" id="openBtnMobileNav" title="메뉴 열기" aria-label="메뉴 열기"><span class="ir"></span></button>
+            <nav class="main">
+                <ul class="main__list">
+                    <li class="main__list-item"><a href="#">로그인</a></li>
+                    <li class="main__list-item"><a href="#">회원가입</a></li>
+                    <li class="main__list-item"><a href="#">이다야 디자인</a></li>        
+                    <li class="main__list-item"><a href="#">이디야 음료</a></li>
+                    <li class="main__list-item"><a href="#">이디야 뉴스</a></li>
+                    <li class="main__list-item"><a href="#">매장 찾기</a></li>
+                </ul>
+                <button type="button" class="button is-close-menu" id="closeBtnMobileNav" title="메뉴 닫기" aria-label="메뉴 닫기"><span class="close" aria-hidden="true">×</span></button>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="banner">
@@ -170,5 +163,14 @@
         </div>
     </footer>
     <button id="btnGoToTop" class="footer__btn-goToTop"></button>
+    <script>
+        
+        document.querySelector("#openBtnMobileNav").addEventListener("click", function(){
+          document.getElementById("header-container").className ="is--active";
+        });
+        document.querySelector("#closeBtnMobileNav").addEventListener("click", function(){
+          document.getElementById("header-container").classList.remove('is--active');
+        });
+    </script>
 </body>
 </html>
