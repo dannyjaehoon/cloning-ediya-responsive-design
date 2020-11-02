@@ -1,0 +1,119 @@
+/* default layout */
+body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.app-header-container,
+.app-main,
+.app-footer-container {
+    width: 100%;
+}
+
+/* header */
+/* default header */
+.app-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/* default logo */
+    .brand {
+        width: 176px;
+        margin: 0;
+        padding: 18px;
+        font-size: 14px;
+    }
+    .brand a {
+        display: block;
+        font-size: 14px;
+    }
+
+@media all and (max-width:767px) {
+    /* mobile header */
+
+    /* mobile button */
+    .is-open-menu {
+        width: 50px;
+        height: 50px;
+        padding: 18px 16px;
+        background:transparent;
+
+    }
+    .is-open-menu .ir {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background:  url(../images/button-navigation.svg) no-repeat 50% 50%;
+    }
+    /* mobile nav */
+    .app-navigation {
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top:0;
+        left:0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        transform: translateX(105vw);
+        transition: all 0.2s;
+        padding-top: 66px;
+        background: hsla(225, 57%, 10%, 0.9);
+        color: #fefefe;
+    }
+    .app-navigation li {
+        border-bottom: 1px solid hsla(225, 57%, 30%, 0.5);
+    }
+    .app-navigation li:last-child {
+        border-bottom: 0;
+    }
+    .app-navigation a {
+    display: block;
+    padding: 12px 22px;
+    transition: all 0.4s ease;
+    }
+
+    .app-navigation a:hover,
+    .app-navigation a:focus {
+      background: #2e437c;
+    }
+    .is--active .app-navigation {
+        transform: none;
+    }
+    .is-close-menu {
+        position: absolute;
+        top:0;
+        right:0;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        color: #fefefe;
+        font-size: 3rem;
+    }
+}
+
+@media all and (min-width:768px) {
+    /* desktop header */
+    .app-header-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+    .app-header {
+        width: 768px;
+    }
+    .is-open-menu,
+    .is-close-menu {
+        display: none;
+    }
+    /* nav */
+    .app-navigation ul {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .app-navigation li{
+        margin-left: 8px;
+        color: #24388d;
+    }
+}
