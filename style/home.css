@@ -1,0 +1,134 @@
+
+/* 추천음료 컨테이너 */
+
+.ediya-recommend {
+    color: var(--theme-default);
+    background-color: var(--theme-secondary);
+    text-align: center;
+}
+.ediya-recommend em{
+    color: var(--theme-primary);
+    font-style: normal;
+}
+.ediya-recommend-text{
+    margin: 15px 0;
+    font-size: 1.4rem;
+}
+.ediya-recommend-text em{
+    font-weight: 700;
+}
+.ediya-recommend-text[lang="en"] {
+    font-weight: 100;
+}
+.ediya-recommend-text[lang="en"]::after {
+    content:"";
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: #000;
+}
+/* 추천음료 리스트 */
+.ediya-recommend-list {
+    position: relative;
+}
+
+.ediya-recommend-beverage {
+    position: absolute;
+    animation: bounce 0.4s infinite alternate ease-in-out;
+}
+.ediya-recommend-beverage:first-child {
+    animation-delay: 0.2s;
+}    
+.ediya-recommend-beverage img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* 메뉴보기 링크 */
+.go-menu {
+    display: inline-block;
+    padding: 8px 24px;
+    color: var(--theme-primary);
+    border: 1px solid currentColor;
+}
+    .ediya-recommend-beverage img{
+        max-width: 100%;
+        height: auto;
+    }
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(5px);
+    }
+}
+/* 추천음료 공통 */
+@media all and (max-width: 767px) {
+    /* 추천음료 모바일 */
+    .ediya-recommend-container {
+        padding-bottom: 165px;;
+    }
+    .ediya-recommend {
+        padding: 25px 0 20px;
+    }
+    .ediya-recommend-text{
+        margin: 15px 0;
+    }
+    .ediya-recommend-text[lang="en"]{
+        font-size: 2.5rem;
+    }
+    .ediya-recommend-text em{
+        display: block;
+    }
+    .ediya-recommend-beverage:first-child{
+        display: none;
+    }
+    .ediya-recommend-beverage:last-child{
+        width: 60%;
+        left: 10%;
+        transform: translateX(-60%);
+        top: 15px;
+    }
+
+}
+    
+@media all and (min-width: 768px) {
+    /* 추천음료 데스크탑 */
+    .ediya-recommend-container {
+        padding-bottom: 245px;;
+    }
+    .ediya-recommend {
+        padding: 20px 0 30px;
+    }
+    .ediya-recommend-text{
+        margin: 30px 0;
+    }
+    .ediya-recommend-text[lang="en"]{
+        font-size: 3.1rem;
+    }
+    .ediya-recommend-text[lang="en"]::after {
+        content:"";
+        display: block;
+        width: 40px;
+        height: 1px;
+        background: #000;
+        margin:30px auto 0;
+    } 
+    .ediya-recommend-list {
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ediya-recommend-beverage:first-child{
+        left: -50px;
+        width: 306px;
+        top: -135px;
+    }
+    .ediya-recommend-beverage:last-child{
+        right: -180px;
+        top: -55px;
+        width: 457px
+        
+    }
+}
