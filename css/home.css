@@ -235,6 +235,7 @@
   right: 15px;
 }
 
+
 /* Mobile UI 적용을 위한 Breakpoint */
 @media all and (max-width: 767px) {
   /* home 이디야 추천 음료 배치 */

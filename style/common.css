@@ -19,17 +19,79 @@ body {
     align-items: center;
 }
 /* default logo */
-    .brand {
-        width: 176px;
-        margin: 0;
-        padding: 18px;
-        font-size: 14px;
-    }
-    .brand a {
-        display: block;
-        font-size: 14px;
-    }
+.brand {
+    width: 176px;
+    margin: 0;
+    padding: 18px;
+    font-size: 14px;
+}
+.brand a {
+    display: block;
+    font-size: 14px;
+}
+/* 공통 푸터 */
+.footer-container {
+    background: var(--theme-dark);
+    color: var(--theme-disable);
+    width: 100%;
 
+}
+.app-footer {
+    font-size: 1.2rem;
+    position: relative;
+    width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.app-footer > *{
+    width: 100%;
+}
+.guide-list {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    order: -1;
+    padding: 15px 0;
+}
+.guide-list li {
+    margin: 0 5px;
+}
+.guide-list li a{
+    display: block;
+    padding: 5px;
+}
+.footer-brand {
+    padding: 20px 0 10px;
+}
+
+.address {
+    font-style: normal;
+    padding: 0 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.address span{
+    margin: 10px 5px;
+}
+.copyright {
+    padding-bottom: 0 20px;
+    display: block;
+    margin: 15px 0 30px;
+    font-size: 1.1rem;
+}
+
+/* 공통 버튼 */
+.button-goToTop {
+    background-color: transparent;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border:0;
+    padding: 0;
+}
 @media all and (max-width:767px) {
     /* mobile header */
 
@@ -91,6 +153,22 @@ body {
         color: #fefefe;
         font-size: 3rem;
     }
+    /* mobile footer  */
+    .app-footer {
+        width: 100%;
+    }
+    .guide-list {
+        border-bottom: 1px solid #fff;
+    }
+    .address span {
+        display: block;
+        margin: 10px 0;
+    }
+    /* button to top */
+    .button-goToTop {
+        bottom: 15px;
+        right: 15px;
+    }
 }
 
 @media all and (min-width:768px) {
@@ -116,4 +194,19 @@ body {
         margin-left: 8px;
         color: #24388d;
     }
+    /* desktop footer */
+    .footer-container {
+        position: relative;
+        
+    }
+    .footer-container::before {
+        content: "";
+        position: absolute;
+        top: 52px;
+        left: 0; 
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid #878787;
+    }
+    
 }
