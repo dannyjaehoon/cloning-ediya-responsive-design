@@ -1,4 +1,4 @@
-.app-main {
+.member {
     background: #000 url('../images/coffee-mobile.jpg') no-repeat 50% 50%;
     display: flex;
     justify-content: center;
@@ -26,19 +26,20 @@
 .member-form {
     margin-top: 114px;
     margin-bottom: 30px;
-
+    transition: all 2s;
 }
 .member-id,
 .member-password {
     height: 48px;;
     position: relative;
-    border-bottom: 2px solid #fff;
+    
 }
 .member-id {
     margin-bottom: 30px;
 }
 .member-id label, .member-password label {
     position: absolute;
+    transition: all 2s ease-in-out;
     top: 15px;
     left: 0.5em;
     font-weight: 400;
@@ -49,13 +50,44 @@
     padding: 0 1em;
     border: 0;
     color: var(--theme-bright3);
-    height: 100%;
+    height: 48px;
     background: transparent;
+    border-bottom: 2px solid #fff;
 }
-.button-password,
+
 span[role='alert'] {
     display: none;
 }
+.member-form .button-password {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 18px;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+
+
+.button-password .ir {
+    display: block;
+    /* padding: 4px; */
+    width: inherit;
+    height: inherit;
+    background: url(../images/icon-visible.svg) no-repeat 50% 50%;
+  }
+  .is--visible .button-password .ir {
+    background: url(../images/icon-invisible.svg) no-repeat 50% 50%;
+  }
+  .is--invisible .button-password{
+    right: 10px;
+  }
+
+  
 .save-email {
     position: relative;
     display: flex;
@@ -85,6 +117,49 @@ span[role='alert'] {
 .save-email {
     margin-left: 0.5rem;
     cursor: pointer;
+}
+.is--focus .member-id label,
+.is--focus .member-password label{
+    font-size: 10px;
+    left: 0;
+    top: 0;
+}
+
+.is--focus label,
+.is--valid label,
+.is--invalid label {
+    font-size: 1.3rem;
+    transform: translate(-0.5em, -15px);
+}
+.member-form .is--invalid{
+    height: 70px;
+    background: url("../images/icon-warning.svg") no-repeat 0 0;
+}
+.member-form .is--invalid [role="alert"]{
+    display: block;
+    margin-top: 5px;
+}
+.member-form .is--valid, .member-form .is--invalid {
+    background-repeat: no-repeat;
+    background-position: 100% 20px;
+}
+.member-form .is--valid {
+    background: url(../images/icon-checked.svg) no-repeat 0 0;
+}
+.member-form .is--invalid {
+    background: url(../images/icon-warning.svg) no-repeat 0 0;
+}
+.is--focus .button-password {
+    display: block;
+}
+
+.is--focus .button-password {
+    right: 4px;
+}
+
+.is--invalid .button-password,
+.is--valid .button-password {
+    right: 28px;
 }
 
 /* 공통 로그인 회원가입 버튼 및 링크 */
@@ -142,7 +217,7 @@ span[role='alert'] {
     background-image: url(../images/icon-arrow-white.svg);
 }
 @media all and (min-width: 768px) {
-    .app-main {
+    .member {
         background: #000 url('../images/coffee-desktop.jpg') no-repeat 50% 50%;
     }
     /* desktop member form */
